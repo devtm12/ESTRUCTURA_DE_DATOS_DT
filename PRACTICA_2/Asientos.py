@@ -5,6 +5,7 @@ A=[ [0,0,0,0,0,0],
     [0,0,0,0,0,0],
     [0,0,0,0,0,0]
  ]
+
 def reservar(i,j):
     global A
     i-=1
@@ -15,6 +16,7 @@ def reservar(i,j):
     else:
         print("RECHAZO: ocupado")
 
+
 def liberar(i,j):
     global A
     i-=1
@@ -24,6 +26,7 @@ def liberar(i,j):
         print("OK: liberado")
     else:
         print("RECHAZO: ya libre")
+
 
 def consultar(i,j):
     global A
@@ -45,7 +48,9 @@ reservar(6,6)
 consultar(6,6)
 reservar(2,5)
 print(A)
+
 TOTAL=sum(sum(fila) for fila in A)
 print("Total de asientos reservados al final:",TOTAL)
+
 Filas_con_mas_reservas = [i+1 for i, row in enumerate(A) if sum(row) == max(sum(r) for r in A)]
 print("Filas con más reservas:", Filas_con_mas_reservas)    

@@ -7,7 +7,6 @@ A = [
     [7,8,9,2,1,7]
 ]
 
-
 def coordenadas(A, valor):
     listaCoordenadas=[]
     for i in range(len(A[0])):
@@ -20,31 +19,3 @@ def coordenadas(A, valor):
         return print(listaCoordenadas)
     
 coordenadas(A,7)
-
-
-
-
-total_reservados = sum(sum(row) for row in A)
-print("\n Total de asientos reservados al final:", total_reservados)
-
-
-Filas_con_mas_reservas = [i+1 for i, row in enumerate(A) if sum(row) == max(sum(r) for r in A)]
-print("Filas con más reservas:", Filas_con_mas_reservas)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
